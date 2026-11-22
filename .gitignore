@@ -1,0 +1,31 @@
+# Flutter and Dart
+app/.dart_tool/
+app/.flutter-plugins*
+app/.packages
+app/build/
+app/coverage/
+
+# Android and IDE
+app/android/.gradle/
+app/android/build/
+app/android/local.properties
+app/.idea/
+app/*.iml
+.vscode/
+
+# Node
+server/node_modules/
+server/npm-debug.log*
+
+# Secrets
+.env
+.env.*
+*.pem
+*.p8
+*service-account*.json
+*firebase-adminsdk*.json
+app/android/app/google-services.json
+app/ios/Runner/GoogleService-Info.plist
+
+# Temporary evidence generation
+work/
