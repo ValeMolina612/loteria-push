@@ -115,67 +115,81 @@ Nunca subas el JSON de una cuenta de servicio. El `.gitignore` excluye llaves, a
 
 ## Ciclos TDD del manual
 
-Las rondas 0 y 1 establecen reglas y configuración. Las rondas 2 a 9 contienen el ciclo rojo/verde ejecutable. Las rondas 10 a 12 son integración real, seguridad y evolución de tokens.
+Todas las imágenes siguientes son capturas reales de Visual Studio Code durante la ejecución del proyecto. Incluyen el logotipo de Lotería Push y el usuario de GitHub `ValeMolina612`. Las rondas 2 a 9 documentan ambos pasos del ciclo TDD: primero la prueba roja con la implementación ausente o incompleta y después la misma prueba en verde. Las rondas 0, 1 y 10 a 12 son verificaciones de preparación, dispositivo, seguridad y evolución definidas por el manual, por lo que se documentan con su evidencia ejecutada sin inventar un ciclo rojo/verde.
+
+### Ronda 0 Reglas del juego
+
+![Ronda 0, pruebas reales de las reglas](docs/capturas/tdd-real/ronda_00_evidencia_real.png)
+
+### Ronda 1 Preparación y configuración
+
+![Ronda 1, comprobación real del entorno](docs/capturas/tdd-real/ronda_01_evidencia_real.png)
 
 ### Ronda 2 Baraja y líneas
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 2 roja](docs/capturas/tdd/ronda_02_rojo.png) | ![Ronda 2 verde](docs/capturas/tdd/ronda_02_verde.png) |
+| ![Ronda 2 roja real](docs/capturas/tdd-real/ronda_02_rojo_real.png) | ![Ronda 2 verde real](docs/capturas/tdd-real/ronda_02_verde_real.png) |
 
 ### Ronda 3 Mensajes push
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 3 roja](docs/capturas/tdd/ronda_03_rojo.png) | ![Ronda 3 verde](docs/capturas/tdd/ronda_03_verde.png) |
+| ![Ronda 3 roja real](docs/capturas/tdd-real/ronda_03_rojo_real.png) | ![Ronda 3 verde real](docs/capturas/tdd-real/ronda_03_verde_real.png) |
 
 ### Ronda 4 Sala y autorización
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 4 roja](docs/capturas/tdd/ronda_04_rojo.png) | ![Ronda 4 verde](docs/capturas/tdd/ronda_04_verde.png) |
+| ![Ronda 4 roja real](docs/capturas/tdd-real/ronda_04_rojo_real.png) | ![Ronda 4 verde real](docs/capturas/tdd-real/ronda_04_verde_real.png) |
 
 ### Ronda 5 API y envío seguro
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 5 roja](docs/capturas/tdd/ronda_05_rojo.png) | ![Ronda 5 verde](docs/capturas/tdd/ronda_05_verde.png) |
+| ![Ronda 5 roja real](docs/capturas/tdd-real/ronda_05_rojo_real.png) | ![Ronda 5 verde real](docs/capturas/tdd-real/ronda_05_verde_real.png) |
 
 ### Ronda 6 Eventos y partida Flutter
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 6 roja](docs/capturas/tdd/ronda_06_rojo.png) | ![Ronda 6 verde](docs/capturas/tdd/ronda_06_verde.png) |
+| ![Ronda 6 roja real](docs/capturas/tdd-real/ronda_06_rojo_real.png) | ![Ronda 6 verde real](docs/capturas/tdd-real/ronda_06_verde_real.png) |
 
 ### Ronda 7 Controlador
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 7 roja](docs/capturas/tdd/ronda_07_rojo.png) | ![Ronda 7 verde](docs/capturas/tdd/ronda_07_verde.png) |
+| ![Ronda 7 roja real](docs/capturas/tdd-real/ronda_07_rojo_real.png) | ![Ronda 7 verde real](docs/capturas/tdd-real/ronda_07_verde_real.png) |
 
 ### Ronda 8 Firebase y estados de la app
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 8 roja](docs/capturas/tdd/ronda_08_rojo.png) | ![Ronda 8 verde](docs/capturas/tdd/ronda_08_verde.png) |
+| ![Ronda 8 roja real](docs/capturas/tdd-real/ronda_08_rojo_real.png) | ![Ronda 8 verde real](docs/capturas/tdd-real/ronda_08_verde_real.png) |
 
 ### Ronda 9 Pantallas y arranque
 
 | Rojo | Verde |
 |---|---|
-| ![Ronda 9 roja](docs/capturas/tdd/ronda_09_rojo.png) | ![Ronda 9 verde](docs/capturas/tdd/ronda_09_verde.png) |
+| ![Ronda 9 roja real](docs/capturas/tdd-real/ronda_09_rojo_real.png) | ![Ronda 9 verde real](docs/capturas/tdd-real/ronda_09_verde_real.png) |
 
 ### Ronda 10 Dispositivos reales
 
 Lista manual: primer plano, segundo plano, app cerrada, colapso, TTL, ganador, “Casi”, permiso rechazado, token muerto y detención forzada. La entrega real exige credenciales Firebase y, para iOS, APNs y un dispositivo Apple.
 
+![Ronda 10, evidencia real de compilación y dispositivos](docs/capturas/tdd-real/ronda_10_evidencia_real.png)
+
 ### Ronda 11 Seguridad
 
 Los temas solo llevan datos públicos; el servidor valida todas las acciones; las claves de servicio quedan fuera de la app; los destinos push se tratan como datos personales; existen límites de sala, cuerpo y frecuencia de canto.
 
+![Ronda 11, pruebas reales de seguridad](docs/capturas/tdd-real/ronda_11_evidencia_real.png)
+
 ### Ronda 12 Tokens y FID
 
 `PuertoPush` aísla el SDK. El servidor acepta destinos `token` y `fid`. El adaptador actual conserva el camino por token para compatibilidad y deja la migración a `register`, `onRegistered` y `unregister` concentrada en un único archivo.
+
+![Ronda 12, pruebas reales de tokens y FID](docs/capturas/tdd-real/ronda_12_evidencia_real.png)
 
 ## Comandos de verificación
 
