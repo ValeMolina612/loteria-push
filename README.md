@@ -92,8 +92,4 @@ Los temas solo llevan datos públicos; el servidor valida todas las acciones; la
 ![Ronda 12, pruebas reales de tokens y FID](docs/capturas/tdd-real/ronda_12_evidencia_real.png)
 
 
-Si el JDK local no reconoce el certificado de Maven, ejecuta la compilación con `GRADLE_OPTS=-Djavax.net.ssl.trustStoreType=Windows-ROOT`.
 
-## Autor
-
-GitHub: [ValeMolina612](https://github.com/ValeMolina612)
